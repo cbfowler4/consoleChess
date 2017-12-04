@@ -15,12 +15,8 @@
 require 'rails_helper'
 
 RSpec.describe Goal, type: :model do
-  let(:user) { FactoryBot.create(:user)}
   subject(:goal) do 
-    goal = FactoryBot.build(:goal) 
-    goal.user_id = user.id 
-    goal.save 
-    goal
+    dummy_create_goal
   end 
   
   describe "validations" do 

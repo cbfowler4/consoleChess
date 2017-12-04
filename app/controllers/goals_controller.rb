@@ -20,7 +20,7 @@ class GoalsController < ApplicationController
   end
 
   def index
-    @goals = Goal.all
+    @users = User.all.includes(:goals)
   end
 
   def show

@@ -1,2 +1,10 @@
-<h1>Goals#index</h1>
-<p>Find me in app/views/goals/index.html.erb</p>
+<h1>Goals!</h1>
+
+<%@users.each do |user| %>
+  <%= user.username %>
+  <% user.goals.each do |goal| %>
+    <a href="<%= goal_url(goal) %>"><%= goal.title %></a>
+    <br>
+  <% end %>
+  <br>
+<% end %>

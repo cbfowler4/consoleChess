@@ -3,22 +3,22 @@
 <form action="<%= goals_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
   <br>
-  <label>Title
-    <input type="text" name="goal[title]" value="">
+  <label id="title">Title
+    <input type="text" name="goal[title]" id="title" value="">
   </label>
   <br>
-  <label>Body
-    <input type="text" name="goal[body]" value="">
+  <label id="body">Body
+    <input type="text" id="body" name="goal[body]" value="">
   </label>
   <br>
   <label>Private Goal?
-    <input type="radio" name="goal[private_goal]" value="true">True
-    <input type="radio" name="goal[private_goal]" value="false">False
+    <input type="radio" name="goal[private_goal]" value="true" id="private_true">True
+    <input type="radio" name="goal[private_goal]" value="false" id="private_false">False
   </label>
   <br>
   <label>Goal Complete? 
-    <input type="radio" name="goal[completed]" value="true">True
-    <input type="radio" name="goal[completed]" value="false">False
+    <input type="radio" name="goal[completed]" value="true" id="completed_true">True
+    <input type="radio" name="goal[completed]" value="false" id="completed_false">False
   </label>
   <br>
   <input type="submit" value="Create Goal">

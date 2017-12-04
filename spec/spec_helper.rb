@@ -59,3 +59,11 @@ def dummy_login
   fill_in("Password", with: "password")
   click_button("Sign In")
 end
+
+def dummy_create_goal
+  user = FactoryBot.create(:user)
+  goal = FactoryBot.build(:goal)
+  goal.user_id = user.id 
+  goal.save 
+  goal 
+end 

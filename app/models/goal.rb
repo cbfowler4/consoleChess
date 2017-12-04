@@ -13,8 +13,8 @@
 #
 
 class Goal < ApplicationRecord
-  validates :title, :body, :user, :private_goal, :completed, :presence => true
-  
+  validates :title, :body, :user, :presence => true
+  validates :private_goal, :completed, inclusion: { in: [true, false]}
   belongs_to :user 
   
   def make_public
